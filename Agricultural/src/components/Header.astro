@@ -1,0 +1,47 @@
+---
+const menuItems = [
+  { name: "Home", href: "#" },
+  { name: "About", href: "#" },
+  { name: "Services", href: "#" },
+  { name: "Contact", href: "#" },
+];
+---
+
+<header class="bg-black p-4">
+  <div class="container mx-auto flex justify-between items-center">
+    <!-- Logo o Título -->
+    <a href="#" class="text-white font-bold text-2xl">
+      MyWebsite
+    </a>
+
+    <!-- Menú de Navegación -->
+    <nav class="hidden md:flex space-x-8">
+      {menuItems.map((item) => (
+        <a
+          href={item.href}
+          class="text-white hover:text-gray-300 transition duration-300"
+        >
+          {item.name}
+        </a>
+      ))}
+    </nav>
+
+    <!-- Botón de menú para móviles -->
+    <button class="md:hidden text-white">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        class="w-6 h-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M4 6h16M4 12h16m-7 6h7"
+        />
+      </svg>
+    </button>
+  </div>
+</header>
