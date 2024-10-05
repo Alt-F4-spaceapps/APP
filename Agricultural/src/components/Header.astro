@@ -1,17 +1,20 @@
 ---
+const { language, setLanguage } = Astro.props;
 const menuItems = [
-  { name: "Home", href: "#" },
-  { name: "About", href: "#" },
-  { name: "Services", href: "#" },
-  { name: "Contact", href: "#" },
+  { name: "Local Support", href: "#" },
+  { name: "Problematic", href: "#" },
+  { name: "Analysis", href: "#" },
+  { name: "About Us", href: "#" }
 ];
 ---
 
-<header class="bg-black p-4">
+<header class="bg-black p-3 z-10 relative">
   <div class="container mx-auto flex justify-between items-center">
     <!-- Logo o Título -->
-    <a href="#" class="text-white font-bold text-2xl">
-      MyWebsite
+    <a href="/" class="text-white mt-3 mr-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+        </svg>
     </a>
 
     <!-- Menú de Navegación -->
@@ -19,7 +22,7 @@ const menuItems = [
       {menuItems.map((item) => (
         <a
           href={item.href}
-          class="text-white hover:text-gray-300 transition duration-300"
+          class="text-[#93DF92] hover:text-gray-300 transition duration-300"
         >
           {item.name}
         </a>
