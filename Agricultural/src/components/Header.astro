@@ -1,7 +1,6 @@
 ---
 import { getRelativeLocaleUrl } from 'astro:i18n';
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
-import Logo from '../../public/Logo.svg.png';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -14,6 +13,9 @@ const changeLanguage = () => {
     window.location.href = newUrl; // Redirigir a la URL del nuevo idioma
 };
 ---
+<head>
+    <link rel="icon" href="/src/assets/agriculture.png" type="image/png" />
+</head>
 
 <header class="bg-black p-3 z-10 relative">
     <div class="container mx-auto flex justify-between items-center">
@@ -26,11 +28,10 @@ const changeLanguage = () => {
 
         <!-- Menú de Navegación -->
         <nav class="hidden md:flex space-x-8 text-[#93DF92] hover:text-gray-300 transition duration-300">
-            <a href="/" class="text-[#93DF92] hover:text-gray-300 transition duration-300">{t('nav.home')}</a>
-            <a href={getRelativeLocaleUrl(currentLocale ?? '', t('nav.local'))} class="text-[#93DF92] hover:text-gray-300 transition duration-300">{t('nav.local')}</a>
-            <a href={getRelativeLocaleUrl(currentLocale ?? '', t('nav.problem'))} class="text-[#93DF92] hover:text-gray-300 transition duration-300">{t('nav.problem')}</a>
-            <a href={getRelativeLocaleUrl(currentLocale ?? '', t('nav.analysis'))} class="text-[#93DF92] hover:text-gray-300 transition duration-300">{t('nav.analysis')}</a>
-            <a href={getRelativeLocaleUrl(currentLocale ?? '', t('nav.about'))} class="text-[#93DF92] hover:text-gray-300 transition duration-300">{t('nav.about')}</a>
+            <a href={getRelativeLocaleUrl(currentLocale ?? '', t('nav2.local'))} class="text-[#93DF92] hover:text-gray-300 transition duration-300">{t('nav.local')}</a>
+            <a href={getRelativeLocaleUrl(currentLocale ?? '', t('nav2.problem'))} class="text-[#93DF92] hover:text-gray-300 transition duration-300">{t('nav.problem')}</a>
+            <a href={getRelativeLocaleUrl(currentLocale ?? '', t('nav2.analysis'))} class="text-[#93DF92] hover:text-gray-300 transition duration-300">{t('nav.analysis')}</a>
+            <a href={getRelativeLocaleUrl(currentLocale ?? '', t('nav2.about'))} class="text-[#93DF92] hover:text-gray-300 transition duration-300">{t('nav.about')}</a>
         </nav>
         <!-- Botón de menú para móviles -->
         <button class="md:hidden text-white">

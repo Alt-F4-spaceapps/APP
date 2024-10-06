@@ -28,13 +28,11 @@ const { currentLocale } = Astro;
                 </div>
 
                 <!-- Sección de Lenguaje Absoluta a la Derecha -->
-                <div class="absolute right-10 text-right"> <!-- Cambiado a absolute y right-0 -->
-                    <h3 class="text-lg font-bold mb-2">{t('language')}</h3>
+                <div class="absolute right-10 text-right mt-14"> <!-- Cambiado a absolute y right-0 -->
                     <LenguajePeaker />
                 </div>
             </div>
 
-            <p class="text-sm text-center mt-4">{t('footer_text')}</p>
             <p class="text-sm text-center">&copy; {new Date().getFullYear()} CADSS {t('all_rights_reserved')}</p>
         </footer>
     </body>

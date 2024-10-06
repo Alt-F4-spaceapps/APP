@@ -17,5 +17,8 @@ export default defineConfig({
       en: 'es'
     }
   },
+  devToolbar: {
+    enabled: false,
+  },
   integrations: [tailwind()]
 });

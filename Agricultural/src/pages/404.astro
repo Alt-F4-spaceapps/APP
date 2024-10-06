@@ -1,0 +1,32 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils"
+import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro"
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<html lang={lang} dir="ltr" prefix="og: https://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>CADSS</title>
+    <Header />
+  </head>
+  <body class="bg-white flex flex-col min-h-screen">
+    <!-- Contenido de la página -->
+    <main class="flex-grow text-center">
+      <h1 class="text-7xl text-center mt-[290px]">{t('404')}</h1>
+      <button class="mt-10">
+        <a href="/" class="text-center text-2xl text-blue-500">{t('404.boton')}</a>
+      </button>
+    </main>
+    
+    <!-- Footer al fondo -->
+    <footer class="bg-white text-white p-4 text-center">
+      <Footer />
+    </footer>
+  </body>
+</html>
