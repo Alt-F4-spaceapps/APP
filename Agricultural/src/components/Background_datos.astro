@@ -1,0 +1,20 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils"
+import Back from '../../src/assets/Header_Data.jpg';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<html>
+    <body>
+        <div class="relative w-full h-screen bg-white">
+            <!-- Imagen de fondo -->
+            <img src={Back.src} alt="Descripción de la imagen" class="object-cover w-full h-full -translate-y-16 filter brightness-[.9]">
+        
+            <!-- Cuadro de texto centrado -->
+            <div class="absolute bottom-24 right-20 p-4 text-center text-black max-w-xs">
+                <h2 class="text-6xl font-bold break-words">{t('bg-data')}</h2>
+            </div>
+        </div>
+    </body>
+</html>

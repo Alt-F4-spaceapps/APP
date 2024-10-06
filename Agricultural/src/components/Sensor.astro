@@ -14,10 +14,8 @@ const t = useTranslations(lang);
         <p class="text-4xl font-bold text-center mt-24">{t('sensor-text-7')}</p>
 
         <div class="flex mt-16 justify-center mx-8"> <!-- Contenedor flex con márgenes laterales -->
-            <p class="mr-12 text-2xl text-center">{t('sensor-text-6')}</p>
-            <a href="/onshape"> <!-- Imagen a la derecha -->
-                <img src={Sensor_humedad.src} alt="Cad del Dron" class="w-[2100px] h-auto"> <!-- Ancho de la imagen -->
-            </a>
+            <p class="mr-12 text-2xl text-center">{t('sensor-text-6')}<br>{t('sensor-text-6-2')}</p>
+            <img src={Sensor_humedad.src} alt="Cad del Dron" class="w-[600px] h-auto"> <!-- Ancho de la imagen -->
         </div>
         <p class="text-left ml-40 text-4xl mt-10">Track:</p>
         <div class="flex justify-center mt-16 space-x-7"> <!-- Centrar y espaciar las cajas -->

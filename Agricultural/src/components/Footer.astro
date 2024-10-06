@@ -26,14 +26,24 @@ const { currentLocale } = Astro;
                         <li><a href="/contact" class="hover:text-gray-400 transition duration-300">{t('contact')}</a></li>
                     </ul>
                 </div>
-
+            
                 <!-- Sección de Lenguaje Absoluta a la Derecha -->
                 <div class="absolute right-10 text-right mt-14"> <!-- Cambiado a absolute y right-0 -->
                     <LenguajePeaker />
                 </div>
+            </div>            
+            <p class="text-sm text-center">&copy; {new Date().getFullYear()} CADSS</p>
+            <div class="container mx-auto flex flex-col md:flex-row justify-between items-center"> 
+                <a href="https://linktr.ee/AltF4_cadss?utm_source=linktree_profile_share&ltsid=75503b82-a641-45fe-b8ff-1a1e566c5afb" class="flex items-center"> <!-- Añade aquí la URL deseada -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-link-45deg mr-2" viewBox="0 0 16 16">
+                        <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"/>
+                        <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"/>
+                    </svg>
+                    <p class="text-black">CADSS by ALT-F4</p>
+                </a>
+                <p>{t('footer-text')}</p>
+                <p>Mexico, Central America and the Caribbean - Crop Calendars. (s. f.). https://ipad.fas.usda.gov/rssiws/al/crop_calendar/ca.aspx</p>
             </div>
-
-            <p class="text-sm text-center">&copy; {new Date().getFullYear()} CADSS {t('all_rights_reserved')}</p>
         </footer>
     </body>
 </html>

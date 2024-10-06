@@ -30,8 +30,6 @@ const changeLanguage = () => {
         <nav class="hidden md:flex space-x-8 text-[#93DF92] hover:text-gray-300 transition duration-300">
             <a href={getRelativeLocaleUrl(currentLocale ?? '', t('nav2.local'))} class="text-[#93DF92] hover:text-gray-300 transition duration-300">{t('nav.local')}</a>
             <a href={getRelativeLocaleUrl(currentLocale ?? '', t('nav2.problem'))} class="text-[#93DF92] hover:text-gray-300 transition duration-300">{t('nav.problem')}</a>
-            <a href={getRelativeLocaleUrl(currentLocale ?? '', t('nav2.analysis'))} class="text-[#93DF92] hover:text-gray-300 transition duration-300">{t('nav.analysis')}</a>
-            <a href={getRelativeLocaleUrl(currentLocale ?? '', t('nav2.about'))} class="text-[#93DF92] hover:text-gray-300 transition duration-300">{t('nav.about')}</a>
         </nav>
         <!-- Botón de menú para móviles -->
         <button class="md:hidden text-white">

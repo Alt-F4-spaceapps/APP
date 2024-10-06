@@ -1,6 +1,6 @@
 ---
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
-import DronCad from "../assets/DronCad.png";
+import DronCad from "../assets/DRONE.jpg";
 import Cam from "../assets/monitor.png";
 import Health from "../assets/plant_health.png";
 import Sync from "../assets/sync.png";
@@ -15,10 +15,8 @@ const t = useTranslations(lang);
             <p class="text-6xl text-center font-bold">{t('dron-text')}</p> <!-- Título -->
         
             <div class="flex mt-16 justify-center"> <!-- Asegúrate de que esto esté centrado -->
-                <a href="/onshape">
-                    <img src={DronCad.src} alt="Cad del Dron" class="w-[2100px] h-auto ml-28"> <!-- Ancho de la imagen -->
-                </a>
-                <p class="ml-52 text-2xl text-center">{t('dron-text-7')}</p> <!-- Texto -->
+                <img src={DronCad.src} alt="Cad del Dron" class="w-[600px] h-auto ml-28"> <!-- Ancho de la imagen -->
+                <p class="ml-12 text-2xl text-center">{t('dron-text-7')}<br>{t('dron-text-7-2')}</p> <!-- Texto -->
             </div>
         </section>
         

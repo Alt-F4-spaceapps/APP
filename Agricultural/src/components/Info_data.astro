@@ -1,0 +1,28 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils"
+import Uno from '../assets/1.png'
+import Dos from '../assets/2.png'
+import Tres from '../assets/3.png'
+import Cuatro from '../assets/4.png'
+import Cinco from '../assets/5.png'
+import Seis from '../assets/6.png'
+import Siete from '../assets/7.png'
+
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<html lang={lang} dir="ltr" prefix="og: https://ogp.me/ns#">
+	<body>
+        <h2 class="text-center text-4xl">{t('datos-text')}</h2>
+        <img src={Uno.src} alt="Numero">
+        <img src={Dos.src} alt="Numero">
+        <img src={Tres.src} alt="Numero">
+        <img src={Cuatro.src} alt="Numero">
+        <img src={Cinco.src} alt="Numero">
+        <img src={Seis.src} alt="Numero">
+        <img src={Siete.src} alt="Numero">
+        <h2 class="text-center text-4xl">{t('datos-footer')}</h2>
+	</body>
+</html>

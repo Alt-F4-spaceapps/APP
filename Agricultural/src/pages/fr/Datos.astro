@@ -1,10 +1,9 @@
 ---
 import { getLangFromUrl, useTranslations } from "../../i18n/utils"
 import Header from "../../components/Header.astro"
-import Background from "../../components/Background.astro"
-import Cosecha from "../../components/Cosecha.astro"
+import Background from "../../components/Background_datos.astro"
 import Footer from "../../components/Footer.astro"
-import Info from "../../components/Info.astro";
+import InfoData from "../../components/Info_data.astro";
 
 
 const lang = getLangFromUrl(Astro.url);
@@ -19,8 +18,9 @@ const t = useTranslations(lang);
 		<title>CADSS</title>
 		<Header />
 	</head>
-	<body>
-        <h1>About</h1>
+	<body class="bg-white">
+		<Background />
+        <InfoData />
 		<Footer />
 	</body>
 </html>
