@@ -1,50 +1,53 @@
 ---
-const { language, setLanguage } = Astro.props;
-const menuItems = [
-  { name: "Local Support", href: "#" },
-  { name: "Problematic", href: "#" },
-  { name: "Analysis", href: "#" },
-  { name: "About Us", href: "#" }
-];
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import Logo from '../../public/Logo.svg.png';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const { currentLocale } = Astro;
+
+// Función para cambiar el idioma
+const changeLanguage = () => {
+    const newLang = lang === 'en' ? 'es' : 'en';
+    const newUrl = getRelativeLocaleUrl(newLang, Astro.url);
+    window.location.href = newUrl; // Redirigir a la URL del nuevo idioma
+};
 ---
 
 <header class="bg-black p-3 z-10 relative">
-  <div class="container mx-auto flex justify-between items-center">
-    <!-- Logo o Título -->
-    <a href="/" class="text-white mt-3 mr-3">
-        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
-        </svg>
-    </a>
-
-    <!-- Menú de Navegación -->
-    <nav class="hidden md:flex space-x-8">
-      {menuItems.map((item) => (
-        <a
-          href={item.href}
-          class="text-[#93DF92] hover:text-gray-300 transition duration-300"
-        >
-          {item.name}
+    <div class="container mx-auto flex justify-between items-center">
+        <!-- Logo o Título -->
+        <a href="/" class="text-white mt-3 mr-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+            </svg>
         </a>
-      ))}
-    </nav>
 
-    <!-- Botón de menú para móviles -->
-    <button class="md:hidden text-white">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="2"
-        stroke="currentColor"
-        class="w-6 h-6"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M4 6h16M4 12h16m-7 6h7"
-        />
-      </svg>
-    </button>
-  </div>
+        <!-- Menú de Navegación -->
+        <nav class="hidden md:flex space-x-8 text-[#93DF92] hover:text-gray-300 transition duration-300">
+            <a href="/" class="text-[#93DF92] hover:text-gray-300 transition duration-300">{t('nav.home')}</a>
+            <a href={getRelativeLocaleUrl(currentLocale ?? '', t('nav.local'))} class="text-[#93DF92] hover:text-gray-300 transition duration-300">{t('nav.local')}</a>
+            <a href={getRelativeLocaleUrl(currentLocale ?? '', t('nav.problem'))} class="text-[#93DF92] hover:text-gray-300 transition duration-300">{t('nav.problem')}</a>
+            <a href={getRelativeLocaleUrl(currentLocale ?? '', t('nav.analysis'))} class="text-[#93DF92] hover:text-gray-300 transition duration-300">{t('nav.analysis')}</a>
+            <a href={getRelativeLocaleUrl(currentLocale ?? '', t('nav.about'))} class="text-[#93DF92] hover:text-gray-300 transition duration-300">{t('nav.about')}</a>
+        </nav>
+        <!-- Botón de menú para móviles -->
+        <button class="md:hidden text-white">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                class="w-6 h-6"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4 6h16M4 12h16m-7 6h7"
+                />
+            </svg>
+        </button>
+    </div>
 </header>

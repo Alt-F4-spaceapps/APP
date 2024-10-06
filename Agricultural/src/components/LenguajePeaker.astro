@@ -1,0 +1,26 @@
+---
+import { languages } from "../i18n/ui.ts";
+---
+
+<html>
+    <head>
+        <meta charset="UTF-8" />
+    </head>
+    <ul>
+        {
+            Object.entries(languages).map(([lang, label]) => (
+                <li>
+                    <a href={`/${lang}/`}>{label}</a>
+                </li>
+            ))
+        }
+    </ul>
+</html>
+
+<style>
+    a {
+        text-decoration: none;
+        color: #000000;
+        list-style-type: none;
+    }
+</style>

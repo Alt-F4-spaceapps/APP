@@ -1,0 +1,33 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import Costa_Rica from '../assets/costa_rica.png';
+import Cuba from '../assets/cuba.png';
+import Dominican_Republic from '../assets/dominican.png';
+import Guatemala from '../assets/guatemala.png';
+import Haiti from '../assets/haiti.png';
+import Honduras from '../assets/honduras.png';
+import Mexico from '../assets/mexico.png';
+import Nicaragua from '../assets/nicaragua.png';
+import Panama from '../assets/panama.png';
+import El_Salvador from '../assets/salvador.png';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<html lang={lang}>
+    <body>
+        <div class="grid grid-cols-2 gap-8 mt-20 justify-items-center w-[1200px] h-auto mx-auto"> <!-- Contenedor de cuadrícula -->
+          <img src={Costa_Rica.src} alt="Costa Rica"/>
+          <img src={Cuba.src} alt="Cuba"/>
+          <img src={Dominican_Republic.src} alt="República Dominicana"/>
+          <img src={Guatemala.src} alt="Guatemala"/>
+          <img src={Haiti.src} alt="Haití"/>
+          <img src={Honduras.src} alt="Honduras"/>
+          <img src={Mexico.src} alt="México"/>
+          <img src={Nicaragua.src} alt="Nicaragua"/>
+          <img src={Panama.src} alt="Panamá"/>
+          <img src={El_Salvador.src} alt="El Salvador"/>
+        </div>
+    </body>
+</html>

@@ -1,3 +1,41 @@
 ---
-// Footer.astro
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import LenguajePeaker from "../components/LenguajePeaker.astro";
+import { getRelativeLocaleUrl } from 'astro:i18n';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const { currentLocale } = Astro;
 ---
+
+<html lang={lang}>
+    <body class="bg-gray-100">
+        <!-- Contenido de la página -->
+
+        <footer class="bg-white text-black py-8 mt-12 relative"> <!-- Añadir relative aquí -->
+            <!-- Línea Superior -->
+            <div class="border-t border-gray-700 mb-4"></div>
+
+            <div class="container mx-auto flex flex-col md:flex-row justify-between items-center"> 
+                <!-- Sección de Enlaces Rápidos -->
+                <div class="mb-6 text-black">
+                    <ul>
+                        <li><a href="/" class="hover:text-gray-400 transition duration-300">{t('home')}</a></li>
+                        <li><a href="/about" class="hover:text-gray-400 transition duration-300">{t('about')}</a></li>
+                        <li><a href="/services" class="hover:text-gray-400 transition duration-300">{t('services')}</a></li>
+                        <li><a href="/contact" class="hover:text-gray-400 transition duration-300">{t('contact')}</a></li>
+                    </ul>
+                </div>
+
+                <!-- Sección de Lenguaje Absoluta a la Derecha -->
+                <div class="absolute right-10 text-right"> <!-- Cambiado a absolute y right-0 -->
+                    <h3 class="text-lg font-bold mb-2">{t('language')}</h3>
+                    <LenguajePeaker />
+                </div>
+            </div>
+
+            <p class="text-sm text-center mt-4">{t('footer_text')}</p>
+            <p class="text-sm text-center">&copy; {new Date().getFullYear()} CADSS {t('all_rights_reserved')}</p>
+        </footer>
+    </body>
+</html>

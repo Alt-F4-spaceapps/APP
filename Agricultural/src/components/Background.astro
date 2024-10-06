@@ -1,5 +1,8 @@
 ---
+import { getLangFromUrl, useTranslations } from "../i18n/utils"
 import Back from '../../src/assets/Header.jpg';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 
@@ -11,9 +14,9 @@ import Back from '../../src/assets/Header.jpg';
         
             <!-- Cuadro de texto en la parte superior izquierda -->
             <div class="absolute top-6 left-12 p-12 text-white text-center text-bold text-6xl">
-                <h2>Comprehensive</h2>
-                <h2>Agricultural Decision</h2>
-                <h2>Support System</h2>
+                <h2>{t('bg-text1')}</h2>
+                <h2>{t('bg-text2')}</h2>
+                <h2>{t('bg-text3')}</h2>
             </div>
         
             <!-- Cuadro de texto en la parte inferior derecha -->
