@@ -17,17 +17,42 @@ const t = useTranslations(lang);
 
 <html lang={lang}>
     <body>
-        <div class="grid grid-cols-2 gap-8 mt-20 justify-items-center w-[1200px] h-auto mx-auto"> <!-- Contenedor de cuadrícula -->
-          <img src={Costa_Rica.src} alt="Costa Rica"/>
-          <img src={Cuba.src} alt="Cuba"/>
-          <img src={Dominican_Republic.src} alt="República Dominicana"/>
-          <img src={Guatemala.src} alt="Guatemala"/>
-          <img src={Haiti.src} alt="Haití"/>
-          <img src={Honduras.src} alt="Honduras"/>
-          <img src={Mexico.src} alt="México"/>
-          <img src={Nicaragua.src} alt="Nicaragua"/>
-          <img src={Panama.src} alt="Panamá"/>
-          <img src={El_Salvador.src} alt="El Salvador"/>
+        <h2 class="text-center text-6xl font-bold mt-40">{t('cosecha')}</h2>
+        <div class="grid grid-cols-2 gap-8 mt-20 justify-items-center">
+          <!-- Las primeras dos imágenes siempre visibles -->
+          <img src={Costa_Rica.src} alt="Costa Rica" class="w-[500px] h-auto" />
+          <img src={Cuba.src} alt="Cuba" class="w-[500px] h-auto" />
         </div>
+
+        <!-- Contenedor con las imágenes ocultas al principio -->
+        <div id="more-images" class="grid grid-cols-2 gap-8 mt-4 justify-items-center hidden">
+          <img src={Dominican_Republic.src} alt="República Dominicana" class="w-[500px] h-auto" />
+          <img src={Guatemala.src} alt="Guatemala" class="w-[500px] h-auto" />
+          <img src={Haiti.src} alt="Haití" class="w-[500px] h-auto" />
+          <img src={Honduras.src} alt="Honduras" class="w-[500px] h-auto" />
+          <img src={Mexico.src} alt="México" class="w-[500px] h-auto" />
+          <img src={Nicaragua.src} alt="Nicaragua" class="w-[500px] h-auto" />
+          <img src={Panama.src} alt="Panamá" class="w-[500px] h-auto" />
+          <img src={El_Salvador.src} alt="El Salvador" class="w-[500px] h-auto" />
+        </div>
+
+        <!-- Botón "Ver más" -->
+        <div class="flex justify-center mt-4">
+          <button id="show-more-btn" class="bg-blue-500 text-white px-4 py-2 rounded">Ver más</button>
+        </div>
+
+        <script>
+          const showMoreBtn = document.getElementById('show-more-btn');
+          const moreImages = document.getElementById('more-images');
+
+          showMoreBtn.addEventListener('click', () => {
+            moreImages.classList.toggle('hidden');
+            if (moreImages.classList.contains('hidden')) {
+              showMoreBtn.textContent = 'Ver más';
+            } else {
+              showMoreBtn.textContent = 'Ver menos';
+            }
+          });
+        </script>
     </body>
 </html>

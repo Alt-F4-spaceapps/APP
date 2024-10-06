@@ -19,6 +19,7 @@ export const ui = {
         'info-pest': 'PEST',
         'info-analysis': 'ANALISIS COMPLETO',
         'info-soil': 'SUELO',
+        'cosecha': 'Calendario de Cosecha',
     },
     en: {
         'nav.local': 'Local Support',
@@ -32,6 +33,7 @@ export const ui = {
         'info-pest': 'PEST',
         'info-analysis': 'COMPLETE ANALYSIS',
         'info-soil': 'SOIL',
+        'cosecha': 'Crops Calendar',
     },
     fr: {
         'nav.local': 'Support local',
@@ -45,5 +47,6 @@ export const ui = {
         'info-pest': 'PEST',
         'info-analysis': 'ANALYSE COMPLÈTE',
         'info-soil': 'SOL',
+        'cosecha': 'Calendrier des récoltes',
     },
 } as const;
