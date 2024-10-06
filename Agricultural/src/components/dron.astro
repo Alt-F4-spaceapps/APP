@@ -11,14 +11,16 @@ const t = useTranslations(lang);
 
 <html lang={lang} dir="ltr" prefix="og: https://ogp.me/ns#">
 	<body class="flex flex-col items-center"> <!-- Asegúrate de que el cuerpo esté centrado -->
-        <p class="text-6xl text-center font-bold">{t('dron-text')}</p> <!-- Título -->
+        <section id="dron">
+            <p class="text-6xl text-center font-bold">{t('dron-text')}</p> <!-- Título -->
         
-        <div class="flex mt-16 justify-center"> <!-- Asegúrate de que esto esté centrado -->
-            <a href="/onshape">
-                <img src={DronCad.src} alt="Cad del Dron" class="w-[2100px] h-auto ml-28"> <!-- Ancho de la imagen -->
-            </a>
-            <p class="ml-52 text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus asperiores illo quam nam numquam delectus quasi inventore. Animi nisi cumque ut neque quo, reiciendis quam, aspernatur exercitationem, et cum voluptas!</p> <!-- Texto -->
-        </div>
+            <div class="flex mt-16 justify-center"> <!-- Asegúrate de que esto esté centrado -->
+                <a href="/onshape">
+                    <img src={DronCad.src} alt="Cad del Dron" class="w-[2100px] h-auto ml-28"> <!-- Ancho de la imagen -->
+                </a>
+                <p class="ml-52 text-2xl text-center">{t('dron-text-7')}</p> <!-- Texto -->
+            </div>
+        </section>
         
         <p class="text-left ml-40 text-4xl mt-10">Track:</p>
         

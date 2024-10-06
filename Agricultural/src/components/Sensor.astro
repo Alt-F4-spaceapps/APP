@@ -11,12 +11,10 @@ const t = useTranslations(lang);
 
 <html lang={lang} dir="ltr" prefix="og: https://ogp.me/ns#">
 	<body class="bg-white">
-        <p class="text-4xl font-bold text-center mt-24">USING YOUR CADSS SOIL ANALYZER</p>
+        <p class="text-4xl font-bold text-center mt-24">{t('sensor-text-7')}</p>
 
         <div class="flex mt-16 justify-center mx-8"> <!-- Contenedor flex con márgenes laterales -->
-            <p class="mr-12 text-2xl text-left"> <!-- Texto a la izquierda -->
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus asperiores illo quam nam numquam delectus quasi inventore. Animi nisi cumque ut neque quo, reiciendis quam, aspernatur exercitationem, et cum voluptas!
-            </p>
+            <p class="mr-12 text-2xl text-center">{t('sensor-text-6')}</p>
             <a href="/onshape"> <!-- Imagen a la derecha -->
                 <img src={Sensor_humedad.src} alt="Cad del Dron" class="w-[2100px] h-auto"> <!-- Ancho de la imagen -->
             </a>

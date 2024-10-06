@@ -34,12 +34,15 @@ export const ui = {
         'dron-text-4': 'Seguimiento de la salud del cultivo',
         'dron-text-5': 'Todo en Uno',
         'dron-text-6': 'Sincroniza tus dispositivos CADSS y obtén el análisis completo',
+        'dron-text-7': 'Sigue el desarrollo de tus cultivos a través de rutas establecidas. Sincroniza los diferentes sensores CADSS para tener un análisis completo sobre los cultivos y mejorar su bienestar detectando plagas, sequías o anomalías',
         'sensor-text': 'Humedad',
-        'sensor-text-1': 'sdsadaedsdasd',
+        'sensor-text-1': 'Balance hídrico desde las raíces',
         'sensor-text-2': 'Suelo',
         'sensor-text-3': 'Fertilidad del suelo y problemas',
         'sensor-text-4': 'Salud',
-        'sensor-text-5': 'Seguimiento de la salud del cultivo'
+        'sensor-text-5': 'Seguimiento de la salud del cultivo',
+        'sensor-text-6': 'Nuestro sensor en tierra recopila datos desde debajo del suelo para mostrar un informe sobre la humedad, la fertilidad del suelo y el estado del cultivo desde la raíz hasta la parte superior. Conéctelo al dron, para recibir un análisis complementario de toda el área de cosecha.',
+        'sensor-text-7': 'USANDO TU ANALIZADOR DE SUELO CADSS'
     },
     en: {
         'nav.local': 'Local Support',
@@ -68,12 +71,15 @@ export const ui = {
         'dron-text-4': 'Crop health tracking',
         'dron-text-5': 'All in One',
         'dron-text-6': 'Sync your CADSS devices and get the complete analysis',
+        'dron-text-7': 'Follow your crops development through established routes. Sync the different CADSS sensors to have a complete analysis on crops and improve their wellness by detecting pests, droughts or anomalies',
         'sensor-text': 'Humidity',
-        'sensor-text-1': 'sdsadaedsdasd',
+        'sensor-text-1': 'Water balance from roots',
         'sensor-text-2': 'Soil',
         'sensor-text-3': 'Fertility of soil and issues',
         'sensor-text-4': 'Health',
         'sensor-text-5': 'Crop health tracking ',
+        'sensor-text-6': 'Our on ground sensor collects data from under the soil to display a report on humidity, soil fertility and the crop status from root to top. Connect it to the drone, to receive a complementary analysis from the complete area of harvest.',
+        'sensor-text-7': 'USING YOUR CADSS SOIL ANALYZER'
     },
     fr: {
         'nav.local': 'Support Local',
@@ -102,11 +108,14 @@ export const ui = {
         'dron-text-4': 'Suivi de la santé des cultures',
         'dron-text-5': 'Tout en un',
         'dron-text-6': 'Synchronisez vos appareils CADSS et obtenez l\'analyse complète',
+        'dron-text-7': 'Suivez le développement de vos cultures à travers des itinéraires établis. Synchronisez les différents capteurs CADSS pour obtenir une analyse complète des cultures et améliorer leur bien-être en détectant les ravageurs, les sécheresses ou les anomalies',
         'sensor-text': 'Humidité',
-        'sensor-text-1': 'sdsadaedsdasd',
+        'sensor-text-1': 'Équilibre hydrique des racines',
         'sensor-text-2': 'Sol',
         'sensor-text-3': 'Fertilité du sol et problèmes',
         'sensor-text-4': 'Santé',
-        'sensor-text-5': 'Suivi de la santé des cultures'
+        'sensor-text-5': 'Suivi de la santé des cultures',
+        'sensor-text-6': 'Notre capteur au sol collecte des données sous le sol pour afficher un rapport sur l\'humidité, la fertilité du sol et l\'état de la culture de la racine au sommet. Connectez-le au drone pour recevoir une analyse complémentaire de toute la zone de récolte.',
+        'sensor-text-7': 'UTILISATION DE VOTRE ANALYSEUR DE SOL CADSS'
     },
 } as const;

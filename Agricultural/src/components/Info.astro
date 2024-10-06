@@ -14,7 +14,7 @@ const t = useTranslations(lang);
         <!-- Imagen de Water encima -->
         <div class="flex flex-col items-center mb-4">
             <img src={Water.src} alt="Water" class="w-32 h-auto" />
-            <button class="mt-10 px-[30px] py-3 bg-[#0E91A8] text-white rounded-full">{t('info-water')}</button>
+            <p class="mt-10 text-black text-4xl">{t('info-water')}</p>
         </div>
 
         <!-- Sección de Pest, Engrane y Soil -->
@@ -22,19 +22,21 @@ const t = useTranslations(lang);
             <!-- Imagen de Pest a la izquierda -->
             <div class="flex flex-col items-center">
                 <img src={Pest.src} alt="Pest" class="w-32 h-auto" />
-                <button class="mt-10 px-[30px] py-3 bg-[#0E91A8] text-white rounded-full">{t('info-pest')}</button>
+                <p class="mt-10 text-black text-4xl">{t('info-pest')}</p>
             </div>
 
             <!-- Imagen de Engrane en el centro -->
             <div class="flex flex-col items-center">
                 <img src={Engrane_main.src} alt="Engrane" class="w-[320px] h-auto" />
-                <button class="mt-10 px-[35px] py-5 bg-[#4AB447] text-white rounded-full">{t('info-analysis')}</button>
+                <a href={`/${lang}/Local#dron`}>
+                    <button class="mt-10 px-[35px] py-5 bg-[#4AB447] text-white rounded-full">{t('info-analysis')}</button>
+                </a>
             </div>
 
             <!-- Imagen de Soil a la derecha -->
             <div class="flex flex-col items-center">
                 <img src={Soil.src} alt="Soil" class="w-32 h-auto" />
-                <button class="mt-10 px-[30px] py-3 bg-[#0E91A8] text-white rounded-full">{t('info-soil')}</button>
+                <p class="mt-10 text-black text-4xl">{t('info-soil')}</p>
             </div>
         </div>
     </section>
