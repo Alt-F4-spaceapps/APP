@@ -3,6 +3,8 @@ import { getLangFromUrl, useTranslations } from "../i18n/utils"
 import Header from "../components/Header.astro"
 import BackgroundLocal from "../components/Background_local.astro";
 import Footer from "../components/Footer.astro"
+import Dron from "../components/Dron.astro";
+import Sensor from "../components/Sensor.astro";
 
 
 const lang = getLangFromUrl(Astro.url);
@@ -19,7 +21,8 @@ const t = useTranslations(lang);
 	</head>
 	<body class="bg-white">
         <BackgroundLocal />
-        <h1>Local</h1>
+        <Dron />
+        <Sensor />
         <Footer />
 	</body>
 </html>
